@@ -50,6 +50,7 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@skypack/package-check": "^0.2.2",
     "@storybook/addon-essentials": "^7.0.0",
     "@storybook/addon-interactions": "^7.0.0",
     "@storybook/addon-links": "^7.0.0",
