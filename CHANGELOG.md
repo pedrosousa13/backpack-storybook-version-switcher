@@ -1,3 +1,15 @@
+# v0.0.5 (Fri Sep 08 2023)
+
+#### ⚠️ Pushed to `main`
+
+- fix: add backpack versions to index ([@pedrosousa13](https://github.com/pedrosousa13))
+
+#### Authors: 1
+
+- Pedro Sousa ([@pedrosousa13](https://github.com/pedrosousa13))
+
+---
+
 # v0.0.4 (Fri Sep 08 2023)
 
 #### ⚠️ Pushed to `main`
