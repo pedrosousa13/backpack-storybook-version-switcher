@@ -12,10 +12,11 @@ jobs:
       - name: Prepare repository
         run: git fetch --unshallow --tags
 
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v3
+          # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+           node-version: '18.x'
+           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: yarn install --ignore-scripts
