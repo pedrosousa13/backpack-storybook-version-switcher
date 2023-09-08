@@ -1,3 +1,16 @@
+# v0.0.6 (Fri Sep 08 2023)
+
+#### ⚠️ Pushed to `main`
+
+- fix: add axios and swr to devDeps ([@pedrosousa13](https://github.com/pedrosousa13))
+- fix: add axios and swr to peerdeps ([@pedrosousa13](https://github.com/pedrosousa13))
+
+#### Authors: 1
+
+- Pedro Sousa ([@pedrosousa13](https://github.com/pedrosousa13))
+
+---
+
 # v0.0.5 (Fri Sep 08 2023)
 
 #### ⚠️ Pushed to `main`
