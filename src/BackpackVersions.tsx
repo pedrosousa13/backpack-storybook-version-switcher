@@ -1,23 +1,23 @@
 import React, { memo, useCallback, useEffect, useState } from "react";
 import { useGlobals, useStorybookApi } from "@storybook/manager-api";
 import { Form } from "@storybook/components";
-import useSWR from "swr";
 import axios from "axios";
-
-const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
 export const BackpackVersions = memo(function MyAddonSelector() {
   const [globals, updateGlobals] = useGlobals();
   const [href, setHref] = useState<URL | undefined>();
+  const [data, setData] = useState<any>(null);
   const api = useStorybookApi();
-  const { data, error } = useSWR(
-    '/api/getAllVersions/',
-    fetcher
-  );
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     setHref(new URL(window.location.href));
+  }, []);
+
+  useEffect(() => {
+    (async () => {
+      setData(await axios.get('/api/getAllVersions/').then((res) => res.data))
+    })()
   }, []);
 
   const isActive =
