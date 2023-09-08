@@ -1,3 +1,15 @@
+# v0.0.7 (Fri Sep 08 2023)
+
+#### ⚠️ Pushed to `main`
+
+- fix: remove swr and use axios instead ([@pedrosousa13](https://github.com/pedrosousa13))
+
+#### Authors: 1
+
+- Pedro Sousa ([@pedrosousa13](https://github.com/pedrosousa13))
+
+---
+
 # v0.0.6 (Fri Sep 08 2023)
 
 #### ⚠️ Pushed to `main`
