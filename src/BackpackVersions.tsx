@@ -5,7 +5,7 @@ interface BackpackVersionsProps {
   isActive: boolean;
 }
 
-export const BackpackVersions = memo(function BackpackVersionsSelector({isActive}: BackpackVersionsProps) {
+const BackpackVersions = memo(function BackpackVersionsSelector({isActive}: BackpackVersionsProps) {
   const [href, setHref] = useState<URL | undefined>();
   const [data, setData] = useState<any>(null);
 
@@ -49,3 +49,5 @@ export const BackpackVersions = memo(function BackpackVersionsSelector({isActive
     </select>
   ) : null;
 });
+
+export default BackpackVersions;

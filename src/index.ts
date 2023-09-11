@@ -1,2 +1,2 @@
-import {BackpackVersions} from "./BackpackVersions";
-export {BackpackVersions};
+import BackpackVersions from "./BackpackVersions";
+export default BackpackVersions;
