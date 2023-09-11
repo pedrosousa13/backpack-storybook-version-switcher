@@ -1,13 +1,13 @@
-import React, { memo, useCallback, useEffect, useState } from "react";
-import { useGlobals, useStorybookApi } from "@storybook/manager-api";
-import { Form } from "@storybook/components";
+import React, { memo, useEffect, useState } from "react";
 import axios from "axios";
 
-export const BackpackVersions = memo(function MyAddonSelector() {
-  const [globals, updateGlobals] = useGlobals();
+interface BackpackVersionsProps {
+  isActive: boolean;
+}
+
+export const BackpackVersions = memo(function BackpackVersionsSelector({isActive}: BackpackVersionsProps) {
   const [href, setHref] = useState<URL | undefined>();
   const [data, setData] = useState<any>(null);
-  const api = useStorybookApi();
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -20,30 +20,8 @@ export const BackpackVersions = memo(function MyAddonSelector() {
     })()
   }, []);
 
-  const isActive =
-    [true, 'true'].includes(globals['backpackVersions']) ||
-    process.env.NODE_ENV === 'production';
-
-  const toggleMyTool = useCallback(() => {
-    updateGlobals({
-      ['backpackVersions']: !isActive,
-    });
-  }, [isActive]);
-
-  useEffect(() => {
-    api.setAddonShortcut('backpack-versions', {
-      label: 'Backpack version switcher',
-      defaultShortcut: ['O'],
-      actionName: 'version-switch',
-      showInMenu: false,
-      action: toggleMyTool,
-    });
-  }, [toggleMyTool, api]);
-
   return isActive && data?.versions ? (
-    <Form.Select
-      align={'center'}
-      size={'flex'}
+    <select
       id='storybook-version-switcher'
       onChange={(event) => {
         window.location.href = `/${event.target.value}/`;
@@ -68,6 +46,6 @@ export const BackpackVersions = memo(function MyAddonSelector() {
           );
         }
       )}
-    </Form.Select>
+    </select>
   ) : null;
 });
