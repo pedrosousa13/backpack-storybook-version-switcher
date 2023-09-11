@@ -19,7 +19,7 @@ const BackpackVersions = ({isActive}: BackpackVersionsProps) => {
       setData(await axios.get('/api/getAllVersions/').then((res) => res.data))
     })()
   }, []);
-
+  console.log({data})
   return isActive && data?.versions ? (
     <select
       id='storybook-version-switcher'
