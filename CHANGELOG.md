@@ -1,3 +1,15 @@
+# v0.0.14 (Mon Sep 11 2023)
+
+#### ⚠️ Pushed to `main`
+
+- fix: ignore react tsup ([@pedrosousa13](https://github.com/pedrosousa13))
+
+#### Authors: 1
+
+- Pedro Sousa ([@pedrosousa13](https://github.com/pedrosousa13))
+
+---
+
 # v0.0.13 (Mon Sep 11 2023)
 
 #### ⚠️ Pushed to `main`
