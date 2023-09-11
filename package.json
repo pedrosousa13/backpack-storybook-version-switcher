@@ -39,7 +39,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "prebuild": "yarn clean",
-    "build": "tsup --external=react,react-dom",
+    "build": "tsup --format iife --external=react,react-dom",
     "build:watch": "yarn build --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "run-p build:watch 'storybook --quiet'",
