@@ -1,9 +1,5 @@
-import React, { memo, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-
-interface BackpackVersionsProps {
-  isActive: boolean;
-}
 
 const BackpackVersions = () => {
   const [href, setHref] = useState<URL | undefined>();
