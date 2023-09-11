@@ -1,3 +1,15 @@
+# v0.0.16 (Mon Sep 11 2023)
+
+#### ⚠️ Pushed to `main`
+
+- revert: build umd ([@pedrosousa13](https://github.com/pedrosousa13))
+
+#### Authors: 1
+
+- Pedro Sousa ([@pedrosousa13](https://github.com/pedrosousa13))
+
+---
+
 # v0.0.15 (Mon Sep 11 2023)
 
 #### ⚠️ Pushed to `main`
