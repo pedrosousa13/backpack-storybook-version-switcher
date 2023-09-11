@@ -5,7 +5,7 @@ interface BackpackVersionsProps {
   isActive: boolean;
 }
 
-const BackpackVersions = ({isActive}: BackpackVersionsProps) => {
+const BackpackVersions = () => {
   const [href, setHref] = useState<URL | undefined>();
   const [data, setData] = useState<any>(null);
 
@@ -20,7 +20,7 @@ const BackpackVersions = ({isActive}: BackpackVersionsProps) => {
     })()
   }, []);
   console.log({data})
-  return isActive && data?.versions ? (
+  return data?.versions ? (
     <select
       id='storybook-version-switcher'
       onChange={(event) => {
