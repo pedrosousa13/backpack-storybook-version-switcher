@@ -1,6 +1,6 @@
 {
   "name": "storybook-backpack-version-switcher",
-  "version": "0.0.13",
+  "version": "0.0.12",
   "description": "Switch between backpack versions",
   "keywords": [
     "backpack",
@@ -39,7 +39,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "prebuild": "yarn clean",
-    "build": "tsup",
+    "build": "tsup --external=react,react-dom",
     "build:watch": "yarn build --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "run-p build:watch 'storybook --quiet'",
