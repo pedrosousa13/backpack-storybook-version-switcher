@@ -1,6 +1,6 @@
 {
   "name": "storybook-backpack-version-switcher",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "Switch between backpack versions",
   "keywords": [
     "backpack",
